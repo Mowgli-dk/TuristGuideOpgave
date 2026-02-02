@@ -17,8 +17,8 @@ public class TouristRepository {
 
     private void populateAttractions() { // DATABASE {Name, Description}
 
-        attractions.add(new TouristAttraction("Disney Land", "Amusement Park"));
-        attractions.add(new TouristAttraction("Watching movie", "Movie Theater"));
+        attractions.add(new TouristAttraction("Disney", "Amusement Park"));
+        attractions.add(new TouristAttraction("Movie", "Movie Theater"));
         attractions.add(new TouristAttraction("Bowling", "Activity Center"));
         attractions.add(new TouristAttraction("Esports", "Live competitive computer entertainment"));
     }
