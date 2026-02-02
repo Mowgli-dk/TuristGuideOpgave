@@ -3,6 +3,7 @@ package com.example.turistguideopgave.controller;
 import com.example.turistguideopgave.model.TouristAttraction;
 import com.example.turistguideopgave.model.UpdateRequest;
 import com.example.turistguideopgave.service.TouristService;
+import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -55,6 +56,20 @@ public class  TouristController {
         service.updateAttraction(foundAttraction, request.getNewName(), request.getNewDescription());
         return ResponseEntity.ok(foundAttraction);
     }
+
+    @PostMapping("/delete/{name}")
+    public ResponseEntity<TouristAttraction> deleteAttraction(@RequestBody TouristAttraction attractionToBeDeleted) {
+
+
+        for (TouristAttraction attraction : service.getAllAttractions()) {
+
+            if (attraction.getName().equals(attractionToBeDeleted.getName())) {
+                service.deleteAttraction(attraction);
+            }
+        }
+        return ResponseEntity.ok(attractionToBeDeleted);
+    }
+
 
 
 }

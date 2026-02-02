@@ -38,4 +38,9 @@ public class TouristService {
 
         repository.updateAttraction(attraction, newName, newDescription);
     }
+
+    public void deleteAttraction(TouristAttraction attraction) {
+
+        repository.deleteAttraction(attraction);
+    }
 }

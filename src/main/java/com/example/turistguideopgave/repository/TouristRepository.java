@@ -55,4 +55,9 @@ public class TouristRepository {
         attraction.setName(newName);
         attraction.setDescription(newDescription);
     }
+
+    public void deleteAttraction(TouristAttraction attraction) {
+
+        attractions.remove(attraction);
+    }
 }
