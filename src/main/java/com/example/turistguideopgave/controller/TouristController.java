@@ -4,10 +4,7 @@ import com.example.turistguideopgave.model.TouristAttraction;
 import com.example.turistguideopgave.service.TouristService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,12 +25,19 @@ public class  TouristController {
         return new ResponseEntity<>(attractions, HttpStatus.OK).getBody();
     }
 
-
     @GetMapping("{name}")
     public ResponseEntity<TouristAttraction> getAttractionsByName(@PathVariable String name) {
 
         TouristAttraction attraction = service.getAttractionByName(name);
         return attraction == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(attraction);
-
     }
+
+    @PostMapping("/add")
+    public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction attraction) {
+
+        TouristAttraction touristAttraction = service.createAttraction(attraction);
+        return ResponseEntity.ok(touristAttraction);
+    }
+
+
 }

@@ -27,4 +27,9 @@ public class TouristService {
         }
         return null;
     }
+
+    public TouristAttraction createAttraction(TouristAttraction attraction) {
+
+        return repository.saveAttractionToDatabase(attraction);
+    }
 }

@@ -1,0 +1,28 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### GET RETURN LIST/DATABASE OF ATTRACTIONS
+GET http://localhost:8080/attractions
+
+<> 2026-02-02T114154.200.json
+<> 2026-02-02T113622.404.json
+<> 2026-02-02T110545.404.json
+
+### GET RETURN ATTRACTION BY NAME
+GET http://localhost:8080/attractions/Disney
+
+<> 2026-02-02T115423.200.json
+
+### POST ADD ATTRACTION
+POST http://localhost:8080/attractions/add
+Content-Type: application/json
+
+{
+  "name": "Swimming",
+  "description": "Playing around in the water"
+}
+
+<> 2026-02-02T121247.200.json
+<> 2026-02-02T121241.405.json
+<> 2026-02-02T121210.200.j

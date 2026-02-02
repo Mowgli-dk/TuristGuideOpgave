@@ -29,7 +29,7 @@ public class TouristRepository {
         return new ArrayList<>(attractions);
     }
 
-    // Hent attraction ud fra getName()
+    // Hent attraction ud fra getAttractionsByName()
     public TouristAttraction getAttractionByName(String name) {
 
         for (TouristAttraction attraction : attractions) {
@@ -40,5 +40,11 @@ public class TouristRepository {
             }
         }
         return null;
+    }
+
+    public TouristAttraction saveAttractionToDatabase(TouristAttraction attraction) {
+
+       attractions.add(attraction);
+       return attraction;
     }
 }
