@@ -17,20 +17,20 @@ public class TouristRepository {
 
     private void populateAttractions() { // DATABASE {Name, Description}
 
-        attractions.add(new TouristAttraction("Disney", "Amusement Park"));
-        attractions.add(new TouristAttraction("Movie", "Movie Theater"));
+        attractions.add(new TouristAttraction("Disney Land", "Amusement Park"));
+        attractions.add(new TouristAttraction("Movie Theater", "Movie Theater"));
         attractions.add(new TouristAttraction("Bowling", "Activity Center"));
         attractions.add(new TouristAttraction("Esports", "Live competitive computer entertainment"));
     }
 
-    // Vis alle attractions
-    public List<TouristAttraction> getAllAttractions() {
+
+    public List<TouristAttraction> getAllAttractions() { // Vis alle attractions
 
         return new ArrayList<>(attractions);
     }
 
-    // Hent attraction ud fra getAttractionsByName()
-    public TouristAttraction getAttractionByName(String name) {
+
+    public TouristAttraction getAttractionByName(String name) { // Hent attraction ud fra getAttractionsByName()
 
         for (TouristAttraction attraction : attractions) {
 
@@ -42,7 +42,8 @@ public class TouristRepository {
         return null;
     }
 
-    public TouristAttraction saveAttractionToDatabase(TouristAttraction attraction) {
+
+    public TouristAttraction saveAttractionToDatabase(TouristAttraction attraction) { // Add new Attraction
 
        attractions.add(attraction);
        return attraction;

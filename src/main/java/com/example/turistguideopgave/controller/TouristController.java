@@ -4,11 +4,12 @@ import com.example.turistguideopgave.model.TouristAttraction;
 import com.example.turistguideopgave.service.TouristService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/attractions")
 public class  TouristController {
 
@@ -38,6 +39,12 @@ public class  TouristController {
         TouristAttraction touristAttraction = service.createAttraction(attraction);
         return ResponseEntity.ok(touristAttraction);
     }
+
+//    @PostMapping("/update")
+//    public ResponseEntity<TouristAttraction> updateAttraction() {
+//
+//
+//    }
 
 
 }

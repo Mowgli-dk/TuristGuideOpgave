@@ -32,4 +32,16 @@ public class TouristService {
 
         return repository.saveAttractionToDatabase(attraction);
     }
+
+    public TouristAttraction updateAttraction(String newName, String newDescription) { // Update Attraction {name, description}
+
+        for (TouristAttraction attraction : repository.getAllAttractions()) {
+
+            String updateName = attraction.setName(newName);
+            String updateDescription = attraction.setName(newDescription);
+
+            return new TouristAttraction(updateName, updateDescription);
+        }
+        return null;
+    }
 }

@@ -16,4 +16,14 @@ public class TouristAttraction {
     public String getDescription() {
         return description;
     }
+
+    // Request Update
+    public String setName(String newName) {
+        return this.name = newName;
+    }
+
+    // Request Update
+    public String setDescription(String newDescription) {
+        return this.description = newDescription;
+    }
 }
