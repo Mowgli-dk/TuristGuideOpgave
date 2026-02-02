@@ -1,5 +1,6 @@
 package com.example.turistguideopgave.service;
 import com.example.turistguideopgave.model.TouristAttraction;
+import com.example.turistguideopgave.model.UpdateRequest;
 import com.example.turistguideopgave.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -33,15 +34,8 @@ public class TouristService {
         return repository.saveAttractionToDatabase(attraction);
     }
 
-    public TouristAttraction updateAttraction(String newName, String newDescription) { // Update Attraction {name, description}
+    public void updateAttraction(TouristAttraction attraction, String newName, String newDescription) {
 
-        for (TouristAttraction attraction : repository.getAllAttractions()) {
-
-            String updateName = attraction.setName(newName);
-            String updateDescription = attraction.setName(newDescription);
-
-            return new TouristAttraction(updateName, updateDescription);
-        }
-        return null;
+        repository.updateAttraction(attraction, newName, newDescription);
     }
 }

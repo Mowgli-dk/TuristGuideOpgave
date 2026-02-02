@@ -1,6 +1,7 @@
 package com.example.turistguideopgave.repository;
 
 import com.example.turistguideopgave.model.TouristAttraction;
+import com.example.turistguideopgave.model.UpdateRequest;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,5 +48,11 @@ public class TouristRepository {
 
        attractions.add(attraction);
        return attraction;
+    }
+
+    public void updateAttraction(TouristAttraction attraction, String newName, String newDescription) {
+
+        attraction.setName(newName);
+        attraction.setDescription(newDescription);
     }
 }

@@ -14,7 +14,7 @@ GET http://localhost:8080/attractions/Disney Land
 
 <> 2026-02-02T115423.200.json
 
-### POST ADD ATTRACTION
+### POST ADD ATTRACTION (200)
 POST http://localhost:8080/attractions/add
 Content-Type: application/json
 
