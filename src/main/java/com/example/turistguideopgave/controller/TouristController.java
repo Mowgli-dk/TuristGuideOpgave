@@ -3,7 +3,6 @@ package com.example.turistguideopgave.controller;
 import com.example.turistguideopgave.model.TouristAttraction;
 import com.example.turistguideopgave.model.UpdateRequest;
 import com.example.turistguideopgave.service.TouristService;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

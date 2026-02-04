@@ -1,6 +1,5 @@
 package com.example.turistguideopgave.service;
 import com.example.turistguideopgave.model.TouristAttraction;
-import com.example.turistguideopgave.model.UpdateRequest;
 import com.example.turistguideopgave.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;

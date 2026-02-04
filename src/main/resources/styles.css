@@ -5,5 +5,33 @@
 }
 
 body {
-
+    font-family: "Poppins", sans-serif;
+    overflow-y: scroll;
 }
+
+header {
+    padding: 50px;
+    background-color: #dacb95;
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.navigationBar {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    letter-spacing: 2.5px;
+}
+
+main {
+    background-color: green;
+    height: 50px;
+}
+
+footer {
+    background-color: coral;
+    height: 100px;
+}
+
