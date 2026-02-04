@@ -50,10 +50,12 @@ public class  TouristController {
 
             if (request.getOldName().equals(attraction.getName())) {
                 foundAttraction = attraction;
+                service.updateAttraction(foundAttraction, request.getNewName(), request.getNewDescription());
+                return ResponseEntity.ok(foundAttraction);
             }
         }
-        service.updateAttraction(foundAttraction, request.getNewName(), request.getNewDescription());
-        return ResponseEntity.ok(foundAttraction);
+
+       return ResponseEntity.notFound().build();
     }
 
     @PostMapping("/delete/{name}")
@@ -64,9 +66,10 @@ public class  TouristController {
 
             if (attraction.getName().equals(attractionToBeDeleted.getName())) {
                 service.deleteAttraction(attraction);
+                return ResponseEntity.ok(attractionToBeDeleted);
             }
         }
-        return ResponseEntity.ok(attractionToBeDeleted);
+        return ResponseEntity.notFound().build();
     }
 
 
