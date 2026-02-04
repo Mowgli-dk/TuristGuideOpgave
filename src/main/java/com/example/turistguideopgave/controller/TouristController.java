@@ -12,7 +12,8 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/attractions")
-public class  TouristController {
+public class
+TouristController {
 
     private final TouristService service;
 
@@ -54,7 +55,6 @@ public class  TouristController {
                 return ResponseEntity.ok(foundAttraction);
             }
         }
-
        return ResponseEntity.notFound().build();
     }
 
