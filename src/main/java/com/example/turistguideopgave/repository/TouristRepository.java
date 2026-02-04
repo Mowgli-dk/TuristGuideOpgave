@@ -18,11 +18,13 @@ public class TouristRepository {
 
     private void populateAttractions() { // DATABASE {Name, Description}
 
-        attractions.add(new TouristAttraction("Disney Land", "Amusement Park"));
-        attractions.add(new TouristAttraction("Movie Theater", "Movie Theater"));
-        attractions.add(new TouristAttraction("Bowling", "Activity Center"));
-        attractions.add(new TouristAttraction("Esports", "Live competitive computer entertainment"));
+        attractions.add(new TouristAttraction("Nyhavn", "Gammel havn, tæt på centrum. Mange restauranter og mulighed for kanalrundfart."));
+        attractions.add(new TouristAttraction("Tivoli", "Danmarks første forlystelsespark. Inviterer til en god dag ude for hele familien."));
+        attractions.add(new TouristAttraction("Amalienborg", "Hvor Kongen og den royale familie bor, og man kan se Garderne gå runde."));
+        attractions.add(new TouristAttraction("Marmorkirken", "En imponerende kirke af marmor, kendt for sin runde kuppel."));
+        attractions.add(new TouristAttraction("Christiansborg","Hvor politikerne styrer landet fra. Man kan komme ind og gå rundtur."));
     }
+
 
 
     public List<TouristAttraction> getAllAttractions() { // Vis alle attractions
